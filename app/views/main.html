@@ -16,8 +16,8 @@
         <li class="hidden"><a></a></li>
         <li><a class="page-scroll" ng-click="scroll('#about')" href="#">About</a></li>
         <li><a class="page-scroll" ng-click="scroll('#learn')" href="#">Learn</a></li>
-        <li><a class="page-scroll" ng-click="scroll('#education')" href="#">Education</a></li>
         <li><a class="page-scroll" ng-click="scroll('#experience')" href="#">Experience</a></li>
+        <li><a class="page-scroll" ng-click="scroll('#education')" href="#">Education</a></li>
         <li><a class="page-scroll" ng-click="scroll('#projects')" href="#">Projects</a></li>
         <li><a class="page-scroll" ng-click="scroll('#contact')" href="#">Contact</a></li>
       </ul>
@@ -178,28 +178,15 @@
         <div class="container">
           <ul class="timeline">
 
-            <li class="timeline-inverted">
+            <li class="timeline-inverted" ng-repeat="institute in profile.education.institutes">
               <div class="timeline-badge"><i class="fa fa-graduation-cap"></i></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4 class="timeline-title">University of Southern California</h4>
-                  <div class="timeline-location">Los Angeles, CA</div>
-                  <div class="timeline-dates">2008 - 2009</div>
-                  <div class="timeline-course">Masters in Computer Science</div>
-                  <div class="timeline-body">Specialization in Human Language technology (Applied Artificial Intelligence)</div>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline-inverted">
-              <div class="timeline-badge"><i class="fa fa-graduation-cap"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">University of Waterloo</h4>
-                  <div class="timeline-location">Ontario, Canada</div>
-                  <div class="timeline-dates">2003 - 2008</div>
-                  <div class="timeline-course">Bachelor in Applied Science – Computer Engineering (Honors)</div>
-                  <div class="timeline-body">Option in Software Engineering</div>
+                  <h4 class="timeline-title">{{ institute.title }}</h4>
+                  <div class="timeline-location">{{ institute.location }}</div>
+                  <div class="timeline-dates">{{ institute.dates }}</div>
+                  <div class="timeline-course">{{ institute.course }}</div>
+                  <div class="timeline-body">{{ institute.desc }}</div>
                 </div>
               </div>
             </li>
@@ -285,6 +272,6 @@
 
 <footer>
   <div class="container text-center">
-    <p>Copyright &copy; {{profile.name.first }} {{ profile.name.last }} - {{profile.dates.current.getFullYear() }}</p>
+    <p>Copyright &copy; {{ profile.name.first }} {{ profile.name.last }} - {{profile.dates.current.getFullYear() }}</p>
   </div>
 </footer>

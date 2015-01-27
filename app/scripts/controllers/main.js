@@ -27,7 +27,22 @@ angular.module('grayscaleApp')
         second : 'Second line of description'
       },
       education: {
-        background: '../images/education-bg.jpg'
+        institutes: [
+          {
+            title: 'University of Southern California',
+            location: 'Los Angeles, CA',
+            course: 'Masters in Computer Science',
+            desc: 'Specialization in Human Language technology (Applied Artificial Intelligence)',
+            dates: '2008 - 2009'
+          },
+          {
+            title: 'University of Waterloo',
+            location: 'Ontario, Canada',
+            course: 'Bachelor in Applied Science – Computer Engineering (Honors)',
+            desc: 'Option in Software Engineering',
+            dates: '2003 - 2008'
+          }
+        ]
       },
       learn: {
         languages: [

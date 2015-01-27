@@ -319,7 +319,7 @@ body {
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: #eeeeee;
+  background-color: $grayscale-light;
 }
 .timeline > li {
   margin-bottom: 20px;
@@ -335,7 +335,7 @@ body {
 }
 .timeline > li > .timeline-panel {
   width: 80%;
-  border: 1px solid #d4d4d4;
+  border: 1px solid $grayscale-light;
   padding: 20px;
   margin-left: 60px;
   position: relative;
@@ -343,12 +343,12 @@ body {
 .timeline > li > .timeline-panel:before {
   position: absolute;
   border-top: 15px solid transparent;
-  border-right: 0 solid #ccc;
+  border-right: 0 solid $grayscale-light;
   border-bottom: 15px solid transparent;
   content: " ";
 }
 .timeline > li > .timeline-badge {
-  color: #fff;
+  color: $grayscale-light;
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -357,7 +357,7 @@ body {
   position: absolute;
   top: 16px;
   margin-left: -25px;
-  background-color: #999999;
+  background-color: $grayscale-primary;
   z-index: 100;
   border-radius: 50%;
 }
