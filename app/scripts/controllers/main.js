@@ -9,6 +9,13 @@
  */
 angular.module('grayscaleApp')
   .controller('MainCtrl', function ($scope) {
+
+    $scope.sortTuples = function(tupleList){
+      return tupleList.sort(function(a, b) {
+        return a[1] < b[1] ? 1 : -1;
+      });
+    };
+
     $scope.profile = {
       name: {
         first: 'First',
@@ -26,40 +33,29 @@ angular.module('grayscaleApp')
         languages: [
           ['python', 80],
           ['javascript', 70],
-          ['C#', 70],
-          ['Java ', 70],
+          ['C#', 60],
+          ['Java ', 60],
           ['objective-c', 60],
-          ['PHP', 60],
-          ['Perl', 60],
+          ['PHP', 50],
+          ['Perl', 50],
           ['C / C++ ', 60],
-          ['Self', 40],
+          ['Self', 40]
         ],
         setups: [
-          ['vim', 90],
+          ['vim', 80],
           ['shell-scripting', 90],
-          ['git(hub)', 80],
-          ['stash', 80],
-          ['bitbucket', 80],
-          ['jira', 80]
-        ],
-        tools: [
-          ['svn', 100],
-          ['cvs', 100],
-          ['perforce', 80],
-          ['eclipse', 80],
           ['visual-studio', 80],
-          ['iis', 80],
-          ['apache', 80]
+          ['eclipse', 80],
+          ['x-code', 70]
         ],
         frameworks: [
-          ['django', 60],
-          ['flask', 40],
+          ['django', 70],
+          ['flask', 60],
           ['jquery', 70],
-          ['angular-js', 50],
-          ['yeoman', 70],
-          ['x-code', 50],
-          ['code-igniter', 30],
-          ['mason', 30]
+          ['angular-js', 60],
+          ['yeoman', 80],
+          ['code-igniter', 50],
+          ['mason', 50]
         ]
       },
       dates: {
