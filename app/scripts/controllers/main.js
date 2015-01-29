@@ -147,6 +147,29 @@ angular.module('grayscaleApp')
           }
         ]
       },
+      extra: {
+        projects: [
+          {name: 'color.js', link: 'https://github.com/khanduri/color.js'},
+          {name: 'EZ Apps - iOS apps', link: 'http://ezapps.herokuapp.com/'},
+          {name: 'Structure extractor - Craigslist', link: ''},
+          {name: 'Transliteration - En to Hi', link: ''},
+          {name: 'ANN - Emotion Recognition', link: ''},
+          {name: 'Character Rise Me - Fb App', link: ''},
+          {name: 'Sudoku Solver - CSP', link: ''}
+        ],
+        groups: [
+          {name: 'Asha for Education', link: ''},
+          {name: 'Ekal Vidyalaya', link: ''},
+          {name: 'USC Trekkers group', link: ''},
+          {name: 'Engineering Exploration Volunteer', link: ''}
+        ],
+        hobbies: [
+          {name: 'Tennis / Racquet ball enthusiast', link: ''},
+          {name: 'Running', link: ''},
+          {name: 'Playing any outdoor sport', link: ''},
+          {name: 'Practicing Yoga', link: ''}
+        ]
+      },
       learn: {
         languages: [
           ['python', 80],

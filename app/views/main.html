@@ -75,7 +75,7 @@
         <h2 class="text-center">Things I'd like to learn about</h2>
         <div class="row">
           <div class="col-md-4" ng-repeat="(key, value) in profile.learn">
-            <div>{{ key }}</div><br>
+            <div class="middle">{{ key | uppercase }}</div><br>
             <div class="progress" ng-repeat="topic in sortTuples(value)"><div class="progress-bar prog-{{topic[1]}}">{{ topic[0] }}</div></div>
           </div>
         </div>
@@ -89,7 +89,6 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <h2 class="text-center">Experience</h2>
-
 
         <div class="container">
           <ul class="timeline">
@@ -157,52 +156,22 @@
   <div class="content-section projects-section">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
-        <h2 class="text-center">Projects</h2>
+        <h2 class="text-center">Activities</h2>
 
         <div class="container">
-          <ul class="timeline">
-
-            <li class="timeline-inverted">
-              <div class="timeline-badge"><i class="fa fa-wrench"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title"><a href="">color.js</a></h4>
-                  <div class="timeline-body"></div>
+          <div class="row">
+            <div class="col-md-4" ng-repeat="(key, activities) in profile.extra">
+              <div class="middle">{{key | uppercase}}</div><br>
+              <div class="well" ng-repeat="act in activities">
+                <div ng-if="act.link != ''">
+                  <a href="{{act.link}}">{{act.name}}</a>
+                </div>
+                <div ng-if="act.link == ''">
+                  {{act.name}}
                 </div>
               </div>
-            </li>
-
-            <li class="timeline-inverted">
-              <div class="timeline-badge"><i class="fa fa-wrench"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">EZ Apps - iOS apps</h4>
-                  <div class="timeline-body"></div>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline-inverted">
-              <div class="timeline-badge"><i class="fa fa-wrench"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Structure extractor - Craigslist</h4>
-                  <div class="timeline-body"></div>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline-inverted">
-              <div class="timeline-badge"><i class="fa fa-wrench"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Transliteration - En to Hi</h4>
-                  <div class="timeline-body"></div>
-                </div>
-              </div>
-            </li>
-
-          </ul>
+            </div>
+          </div>
         </div>
 
       </div>

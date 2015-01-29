@@ -48,6 +48,14 @@ a {
 .light {
   font-weight: 400;
 }
+.middle {
+  text-align: center;
+}
+.well {
+  background-color: $grayscale-dark;
+  border: 1px solid $grayscale-light;
+  padding: 10px;
+}
 .progress-bar {
   background: $grayscale-primary;
 }
