@@ -94,68 +94,21 @@
         <div class="container">
           <ul class="timeline">
 
-            <li class="timeline-inverted">
-              <div class="timeline-badge"><i class="fa fa-spin fa-circle-o-notch"></i></div>
+            <li class="timeline-inverted" ng-repeat="work in profile.experience">
+              <div class="timeline-badge"><i class="fa {{ work.fa_class}}"></i></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4 class="timeline-title">Jawbone</h4>
-                  <div class="timeline-location">San Fransisco, CA</div>
-                  <div class="timeline-dates">XXXX - XXXX</div>
-                  <div class="timeline-course">Programmer</div>
-                  <div class="timeline-body">Wthing I worked on</div>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline-inverted">
-              <div class="timeline-badge"><i class="fa fa-comment-o"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Hearsay Social</h4>
-                  <div class="timeline-location">San Fransisco, CA</div>
-                  <div class="timeline-dates">XXXX - XXXX</div>
-                  <div class="timeline-course">Programmer</div>
-                  <div class="timeline-body">Wthing I worked on</div>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline-inverted">
-              <div class="timeline-badge"><i class="fa fa-windows"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Microsoft Inc</h4>
-                  <div class="timeline-location">Seattle, WA</div>
-                  <div class="timeline-dates">XXXX - XXXX</div>
-                  <div class="timeline-course">Programmer</div>
-                  <div class="timeline-body">Wthing I worked on</div>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline-inverted">
-              <div class="timeline-badge"><i class="fa fa-code"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Internships</h4>
-                  <div class="timeline-location">Seattle, WA</div>
-                  <div class="timeline-dates">XXXX - XXXX</div>
-                  <div class="timeline-course">Programmer</div>
-                  <div class="timeline-body">
-                    Microsoft Corporation: Windows Live Mesh - May 2009 – Aug 2009
-                    Created an assembly that provisioned a delegated authentication token management service
-                    ------------
-                    Amazon.com Inc: Personalization - Aug 2007 - Dec 2007
-                    Worked on a ranking mechanism to generate a tag set which describe the list recommended items
-                    ------------
-                    Sun Microsystems: Complex Systems Group - Jan 2006 - Apr 2006
-                    Participated in the design and development of a simulation infrastructure for the behavioral analysis of wireless sensor networks
-                    ------------
-                    Amazon.com Inc: Digital Media Technologies - May 2005 - Aug 2005
-                    Worked on the variety of upgrades to the digital media pipeline (mainly the first internal REST client to the S3 service)
-                    ------------
-                    Epson Canada: Barcode Recognition - Jan 2004 - Apr 2004
-                    Developed a universal 2D barcode decoding application for hand-held image-scanners
+                  <h4 class="timeline-title">{{ work.title }}</h4>
+                  <div class="timeline-location">{{ work.location }}</div>
+                  <div class="timeline-dates">{{ work.dates }}</div>
+                  <div class="timeline-position">{{ work.position }}</div>
+                  <div class="timeline-body" ng-repeat="content in work.body track by $index">
+                    <br/>
+                    <div>
+                    <b>{{content.team_name}}:</b>
+                    </div>
+                    {{ content.team_desc }}
+                    <div ng-repeat="duty in content.duties"> - {{duty}}</div>
                   </div>
                 </div>
               </div>
@@ -182,9 +135,10 @@
               <div class="timeline-badge"><i class="fa fa-graduation-cap"></i></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4 class="timeline-title">{{ institute.title }}</h4>
-                  <div class="timeline-location">{{ institute.location }}</div>
+                  <div class="timeline-title">{{ institute.title }}</div>
                   <div class="timeline-dates">{{ institute.dates }}</div>
+                  <div class="timeline-location">{{ institute.location }}</div>
+                  <br/>
                   <div class="timeline-course">{{ institute.course }}</div>
                   <div class="timeline-body">{{ institute.desc }}</div>
                 </div>
