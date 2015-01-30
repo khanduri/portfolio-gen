@@ -22,8 +22,8 @@ angular.module('grayscaleApp')
         last: 'Khanduri'
       },
       desc: {
-        first : 'The first line of description',
-        second : 'Second line of description'
+        first : 'Senior Software Developer at Jawbone',
+        second : 'Currently in San Francisco, CA'
       },
       experience: [
         {
