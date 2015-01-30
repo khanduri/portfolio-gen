@@ -171,33 +171,44 @@ angular.module('grayscaleApp')
         ]
       },
       learn: {
-        languages: [
-          ['python', 80],
-          ['javascript', 70],
-          ['C#', 60],
-          ['Java ', 60],
-          ['objective-c', 60],
-          ['PHP', 50],
-          ['Perl', 50],
-          ['C / C++ ', 60],
-          ['Self', 40]
-        ],
-        setups: [
-          ['vim', 80],
-          ['shell-scripting', 90],
-          ['visual-studio', 80],
-          ['eclipse', 80],
-          ['x-code', 70]
-        ],
-        frameworks: [
-          ['django', 70],
-          ['flask', 60],
-          ['jquery', 70],
-          ['angular-js', 60],
-          ['yeoman', 80],
-          ['code-igniter', 50],
-          ['mason', 50]
-        ]
+        current: {
+          languages: [
+            ['python', 80],
+            ['javascript', 70],
+            ['objective-c', 60]
+          ],
+          setups: [
+            ['vim', 80],
+            ['shell-scripting', 90],
+            ['x-code', 70]
+          ],
+          frameworks: [
+            ['flask', 70],
+            ['jquery', 60],
+            ['django', 80],
+            ['angular-js', 70],
+            ['yeoman', 80]
+          ]
+        },
+        past: {
+          languages: [
+            ['C#', 80],
+            ['Java ', 80],
+            ['PHP', 50],
+            ['Perl', 40],
+            ['C / C++ ', 70],
+            ['Self', 60]
+          ],
+          setups: [
+            ['visual-studio', 80],
+            ['eclipse', 80]
+          ],
+          frameworks: [
+            ['code-igniter', 50],
+            ['cake-php', 40],
+            ['mason', 50]
+          ]
+        }
       },
       dates: {
         current: new Date()
