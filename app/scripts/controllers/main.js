@@ -22,7 +22,7 @@ angular.module('grayscaleApp')
         last: 'Khanduri'
       },
       desc: {
-        first : 'Senior Software Developer at Affirm',
+        first : 'Software Developer at Affirm',
         second : 'Currently in San Francisco, CA'
       },
       experience: [
