@@ -22,23 +22,40 @@ angular.module('grayscaleApp')
         last: 'Khanduri'
       },
       desc: {
-        first : 'Senior Software Developer at Jawbone',
+        first : 'Senior Software Developer at Affirm',
         second : 'Currently in San Francisco, CA'
       },
       experience: [
         {
-          fa_class: 'fa-spin fa-circle-o-notch',
+          fa_class: 'fa-spin fa-credit-card',
+          title: 'Affirm',
+          location: 'San Fransisco, CA',
+          dates: '2015 - current',
+          position: 'Software Engineer',
+          body: [
+            {
+              team_name: 'Platform team',
+              team_desc: 'The team is responsible for building our own proprietary financial platform, as well as our real-time high-throughput data processing pipeline',
+              duties: [
+                'Build and maintain the bank authentication pipeline for pulling in account infromation',
+                'Setting up dashboards for monitoring and alerting over bank auth pipeline'
+              ]
+            }
+          ]
+        },
+        {
+          fa_class: 'fa-circle-o-notch',
           title: 'Jawbone',
           location: 'San Fransisco, CA',
-          dates: '2014 - current',
-          position: 'Programmer',
+          dates: '2014 - 2015',
+          position: 'Senior Software Engineer',
           body: [
             {
               team_name: 'Insights & Intelligence team',
               team_desc: 'The team is responsible for building an intelligent guide that helps our users make good health choices',
               duties: [
-                'Working on bullding the core intelligence for the Smart Coach brand',
-                'Working on building the Insights system and the internal CRM system to manage the insight content'
+                'Building the core intelligence for the Smart Coach brand',
+                'Building the Insights system and the internal CRM system to manage the insight content'
               ]
             }
           ]
@@ -149,12 +166,12 @@ angular.module('grayscaleApp')
       },
       extra: {
         projects: [
+          {name: 'Workout Generator', link: 'https://workoutgen-stage.herokuapp.com/'},
           {name: 'color.js', link: 'https://github.com/khanduri/color.js'},
           {name: 'EZ Apps - iOS apps', link: 'http://ezapps.herokuapp.com/'},
           {name: 'Structure extractor - Craigslist', link: ''},
           {name: 'Transliteration - En to Hi', link: ''},
           {name: 'ANN - Emotion Recognition', link: ''},
-          {name: 'Character Rise Me - Fb App', link: ''},
           {name: 'Sudoku Solver - CSP', link: ''}
         ],
         groups: [
@@ -165,7 +182,6 @@ angular.module('grayscaleApp')
         ],
         hobbies: [
           {name: 'Tennis / Racquet ball enthusiast', link: ''},
-          {name: 'Running', link: ''},
           {name: 'Playing any outdoor sport', link: ''},
           {name: 'Practicing Yoga', link: ''}
         ]
@@ -173,21 +189,19 @@ angular.module('grayscaleApp')
       learn: {
         current: {
           languages: [
-            ['python', 80],
-            ['javascript', 70],
+            ['python', 90],
+            ['javascript', 80],
             ['objective-c', 60]
           ],
-          setups: [
+          tools: [
             ['vim', 80],
-            ['shell-scripting', 90],
-            ['x-code', 70]
+            ['shell-scripting', 90]
           ],
           frameworks: [
-            ['flask', 70],
-            ['jquery', 60],
-            ['django', 80],
-            ['angular-js', 70],
-            ['yeoman', 80]
+            ['flask', 80],
+            ['jquery', 70],
+            ['angular', 60],
+            ['yeoman', 60]
           ]
         },
         past: {
@@ -199,11 +213,13 @@ angular.module('grayscaleApp')
             ['C / C++ ', 70],
             ['Self', 60]
           ],
-          setups: [
-            ['visual-studio', 80],
-            ['eclipse', 80]
+          tools: [
+            ['eclipse', 80],
+            ['x-code', 60],
+            ['visual-studio', 80]
           ],
           frameworks: [
+            ['django', 80],
             ['code-igniter', 50],
             ['cake-php', 40],
             ['mason', 50]
